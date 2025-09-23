@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduksjon til JS</title>
+    <link rel="stylesheet" href="style.css" </head>
+
+<body>
+    <section id="container">
+        <h1>Introdukson til JS</h1>
+
+        <ol>
+            <li>Finne frem til en HTML tag</li>
+            <li>Endre HTML</li>
+            <li>Bruke funksjon i en script</li>
+            <li>Kalle flere funksjoner</li>
+        </ol>
+
+        <div class="myDivClass" id="myDivId">(tomssss)</div>
+
+        <button onclick="changeDivText()">Endre tekst</button>
+        <button onclick="restoreDivText()">Restore tekst</button>
+        <button onclick="changeBgColor()">Endre Bakgrunnsfarge</button>
+        <button onclick="restoreBgColor()">Restore Bakgrunnsfarge</button>
+        <br>
+        <button onclick="setNum(16)">Set number to 16</button>
+        <button onclick="setNum(3)">Set number to ...</button>
+        <button onclick="increaseNum()">Count up</button>
+        <button onclick="decreaseNum()">Count down</button>
+        <button onclick="secondNum()">Magic</button>
+        <button onclick="scopeTest()">Test Scope</button>
+
+
+
+        <h1>Paint the cube:</h1>
+        <div class="colorableCube" style="background-color: rgb(159, 159, 159);" onclick="setColor(this)"></div>
+        <section class="palette">
+            <div class="colorCircles" style="background-color: red;" onclick="getColor(this)"></div>
+            <div class="colorCircles" style="background-color: green;" onclick="getColor(this)"></div>
+            <div class="colorCircles" style="background-color: blue;" onclick="colorIndicator(); getColor(this)"></div>
+        </section>
+
+        <h1>Jank Stopwatch ®</h1>
+        <section id="stopwatchContainer">
+            <section class="stopwatch">
+                <div id="minutes">0</div>
+                <div>:</div>
+                <div id="seconds">0</div>
+                <!-- <div id="ms">0</div> -->
+            </section>
+
+            <section class="lapClass">
+                <div id="lapLabel">Laptime: </div>
+                <div id="lapDiv"></div>
+            </section>
+
+            <section class="stopwatchButtons">
+                <button onclick="startClock()">Start</button>
+                <button onclick="lapClock()">Lap</button>
+                <button onclick="stopClock()">Stop</button>
+                <button onclick="resetClock()">Reset</button>
+            </section>
+        </section>
+
+        <h1>Traffic Light</h1>
+
+        <section>
+            <div id="trafficLight">
+                <div id="red" class="red circle"></div>
+                <div id="orange" class="orange circle"></div>
+                <div id="green" class="green circle"></div>
+            </div>
+
+            <button onclick="activeLight('green', 'orange', 'red', 'red')">Red</button>
+            <button onclick="activeLight('green', 'green', 'red', 'orange')">Red & Orange</button>
+            <button onclick="activeLight('red', 'green', 'orange', 'orange')">Orange</button>
+            <button onclick="activeLight('red', 'orange', 'green', 'green')">Green</button>
+        </section>
+
+        <h1>Lightbulb Toggle</h1>
+        <div id="bulbDiv"></div>
+        <h1>Age Calculator</h1>
+        <div id="ageDiv">
+            <input type="number" placeholder="Enter full year of birth" onchange="getAge(this.value)">
+            <br>
+            <div id="ageResult" style="font-size: 36px;"></div>
+        </div>
+        <h1>Crocodile Game</h1>
+        <div id="croc">
+            <div id="crocScore" style="font-size: 25px;"></div>
+            <img style="width: 128px;" src="/Emne1/media/croc.jpg" alt="">
+            <div id="numberA"></div>
+            <input id="crocInput" placeholder="Reset, submit operator ><=" onchange="(crocInput(this.value))"
+                type="text">
+            <div id="numberB"></div>
+            <button onclick="(crocGame())">Submit</button>
+            <button onclick="resetCroc()">Reset</button>
+        </div>
+        <div id="format">
+            <h1>Name Formatter</h1>
+            <input onchange="nameFormat(this.value)" type="text" placeholder="Enter your first name">
+            <div id="greetName"></div>
+        </div>
+        <h1>MVC Intro Apps</h1>
+        <div id="mvcApp"></div>
+        <h1>Multiplication Loop</h1>
+        <div id="multiplyApp"></div>
+    </section>
+    <img id="uc" src="/Emne1/media/underconstruction.webp" alt="image">
+
+    <script src="script/script.js"></script>
+    <script src="script/paint.js"></script>
+    <script src="script/stopwatch.js"></script>
+    <script src="script/trafficlight.js"></script>
+    <script src="script/calcAge.js"></script>
+    <script src="script/crocodile.js"></script>
+    <script src="script/formatting.js"></script>
+    <script src="script/mvcApps.js"></script>
+    <script src="script/multiplicationLoop.js"></script>
+    <script src="script/sortingLoop.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+body{
+    background-image: linear-gradient(rgb(110, 169, 204), rgb(196, 196, 246));
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    
+}
+#container{
+    display: grid;
+    width: 50%;
+    justify-self: center;
+}
+h1{
+    background-image: linear-gradient(grey, white);    
+}
+.myDivClass{
+    background-color: grey;
+}
+.red{
+    background-color: red;
+}
+
+.colorCircles{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+.palette{
+    display: grid;
+    grid-auto-flow: column;
+    padding: 10%;
+
+}
+
+.outlined{
+    outline: 3px solid rgb(222, 222, 222);
+}
+
+
+.colorableCube{
+    border-radius: 5%;
+    background-color: grey;
+    width: 92px;
+    height: 92px;
+    display: grid;
+    align-items: center;
+}
+
+#stopwatchContainer{
+    padding-bottom: 5%;
+}
+
+.stopwatch{
+    padding-left: 40px;
+    width: 180px;;
+    font-size: 55px;
+    font-family: monospace;
+    color: rgb(214, 245, 214);
+    background-image: linear-gradient(black, rgb(100, 74, 25));
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.lapClass{
+    color: beige;
+    padding-left: 40px;
+    width: 180px;;
+    height: 24px;
+    display: grid;
+    grid-auto-flow: column;
+    background-image: linear-gradient(rgb(175, 60, 60), rgb(93, 28, 28))
+}
+.stopwatchButtons{
+    display: grid;
+    grid-auto-flow: column;
+    width: 220px;
+    padding-top: 2px;
+    
+
+}
+
+
+/* TRAFFICLIGHT*/
+
+#trafficLight{
+            width:50px;
+            height: 150px;
+            background-color: rgb(33, 32, 32);
+            border-radius: 1em;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 15px;
+        }
+        .red{
+            background-color: red;
+            opacity: 10%;
+        }
+        .orange{
+            background-color: orange;
+            opacity: 10%;
+        }
+        .green{
+            background-color: green;
+            opacity: 10%;
+        }
+        .circle{
+            box-shadow: -5px 10px 20px 10px black inset;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+        .active{
+            opacity: 100%;
+        }
+
+/* LIGHTBULB */
+
+#bulb{
+            background-color: black;
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+        }
+
+#wordOpt{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+}
+#uc{
+    display: grid;
+    justify-self: center;
+}

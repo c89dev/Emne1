@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .purpleBox {
+            width: 56px;
+            height: 56px;
+            background-color: rgb(122, 31, 129);
+        }
+        #app{
+            display: grid;
+            grid-template-columns: repeat(3, 56px);
+            grid-gap: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app"></div>
+
+
+
+    <script>
+        gridCoord = [];
+        gridSize = 9;
+
+
+        function updateView() {
+            document.getElementById("app").innerHTML = `
+            
+            ${drawGrid()}
+            ${drawView()}
+            `
+        }
+        updateView()
+        
+        function drawView(){
+            let html = `
+            <label id="labelId">test</label>
+            
+            `
+            return html;
+        }
+
+        function drawGrid() {
+            gridCoord = [gridSize]
+
+            let html = ``
+            for (let i = 0; i < gridSize; i++) {
+                let randomNumber = Math.floor(Math.random() * 9);
+                html += `<div class="purpleBox box" onclick=("getBtnValue(this)")>${randomNumber}</div>`
+            }
+            return html;
+            updateView();
+        }
+
+        function getBtnValue(el){
+            el = '';
+            document.getElementById("labelId").innerHTML = "AASDASDASD";
+            console.log(el);
+            updateView();
+        }
+
+
+        cubeChanger()
+        function cubeChanger() {
+            document.querySelectorAll(".box").forEach(el => {
+                el.addEventListener("click", function () {
+                    el.style.background = "radial-gradient(rgb(40,100,20), rgb(250,200,70))";
+                    // console.log("Event ran");
+                })
+            })
+        }
+
+    </script>
+</body>
+
+</html>
