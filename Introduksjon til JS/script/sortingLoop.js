@@ -1,5 +1,8 @@
 let vowelApp = document.getElementById("vow");
+let vowelApp2 = document.getElementById("vow2");
 let inputArr;
+let inputStr;
+let inputDisplay = '';
 let aCont = [];
 let eCont = [];
 let iCont = [];
@@ -7,11 +10,64 @@ let oCont = [];
 let uCont = [];
 let yCont = [];
 
-vowelDraw();
+vowelArrDraw();
+vowelStrDraw();
 
-function vowelSort(userInput) {
+function vowelSortStr(userInput) {
+    inputStr = userInput.toLowerCase();
+    inputDisplay = userInput;
+    for (let i = 0; i < inputStr.length; i++) {
+        if (inputStr[i].includes("a")) {
+            aCont.push(inputStr[i]);
+        }
+        else if (inputStr[i].includes("e")){
+            eCont.push(inputStr[i]);
+        }
+        else if (inputStr[i].includes("i")){
+            iCont.push(inputStr[i]);
+        }
+        else if (inputStr[i].includes("o")){
+            oCont.push(inputStr[i]);
+        }
+        else if (inputStr[i].includes("u")){
+            uCont.push(inputStr[i]);
+        }
+        else if (inputStr[i].includes("y")){
+            yCont.push(inputStr[i]);
+        }
+    }
+    console.log(inputStr);
+    vowelStrDraw();
+    aCont = [];
+    eCont = [];
+    iCont = [];
+    oCont = [];
+    uCont = [];
+    yCont = [];
+
+}
+
+function vowelStrDraw() {
+    let html = /*HTML*/`
+    <input onchange="vowelSortStr(this.value)" 
+    placeholder="A word or sentence">
+    <br>
+    ${inputDisplay}
+    <br>
+    <br>
+    ${aCont.length} A's,
+    ${eCont.length} E's,
+    ${iCont.length} I's,
+    ${oCont.length} O's,
+    ${uCont.length} U's,
+    ${yCont.length} Y's
+    `
+    vowelApp2.innerHTML = html;
+}
+
+function vowelSortArr(userInput) {
     inputArr = userInput.toLowerCase().split('');
-
+    inputDisplay = userInput;
     for (let i = 0; i < inputArr.length; i++) {
         if (inputArr[i] == 'a') {
             aCont.push([i]);
@@ -32,30 +88,34 @@ function vowelSort(userInput) {
             yCont.push([i]);
         }
     }
-    console.log(aCont.length + " A's");
-    console.log(eCont.length + " E's");
-    console.log(iCont.length + " I's");
-    console.log(oCont.length + " O's");
-    console.log(uCont.length + " U's");
-    console.log(yCont.length + " Y's");
-    vowelDraw();
+    vowelArrDraw();
+    inputArr = [];
+    aCont = [];
+    eCont = [];
+    iCont = [];
+    oCont = [];
+    uCont = [];
+    yCont = [];
 
 }
 
-function vowelDraw() {
+function vowelArrDraw() {
+    inputDisplay
     let html = /*HTML*/`
-    <input onchange="vowelSort(this.value)" 
+    <input onchange="vowelSortArr(this.value)" 
     placeholder="A word or sentence">
+    <br>
+    ${inputDisplay}
+    <br>
     <br>
     ${aCont.length} A's,
     ${eCont.length} E's,
     ${iCont.length} I's,
     ${oCont.length} O's,
     ${uCont.length} U's,
-    ${yCont.length} Y's,
-
+    ${yCont.length} Y's
     `
-    inputArr = [];
     vowelApp.innerHTML = html;
-
 }
+
+
