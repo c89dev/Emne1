@@ -42,11 +42,11 @@ function changeDivText() {
 }
 
 function changeBgColor() {
-    myDivId.classList.add('red');
+    myDivId.classList.add('justRed');
 }
 
 function restoreBgColor() {
-    myDivId.classList.remove('red');
+    myDivId.classList.remove('justRed');
 }
 
 function restoreDivText() {
