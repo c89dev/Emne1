@@ -1,6 +1,6 @@
 //Model
 
-const mvcApp = document.getElementById("mvcApp");
+let mvcApp = document.getElementById("mvcApp");
 let thing1 = '____';
 let thing2 = '____';
 let adj1 = '____';
@@ -13,9 +13,9 @@ let adj4 = '____';
 //View
 
 updateView();
-function updateView(){
-    mvcApp.innerHTML = /*HTML*/ `<div 
-    style=" border: 2px dotted white;
+function updateView() {
+    mvcApp.innerHTML = /*HTML*/ `<div
+    style=" border: 2px dotted black;
     padding: 5px;
     background-color: lightgrey;"> Once upon a time, there was a ${thing1}, 
     that came ${adj1} in on a ${thing2}. They saw a ${thing3} that was previously used for ${adj3}. 
@@ -47,43 +47,43 @@ function updateView(){
 
 // }
 
-function changeThing1(innerText){
+function changeThing1(innerText) {
     thing1 = innerText;
     updateView();
 }
-function changeThing2(innerText){
+function changeThing2(innerText) {
     thing1 = innerText;
     updateView();
 }
-    function changeAdj1(innerText){
+function changeAdj1(innerText) {
     adj1 = innerText;
     updateView();
 }
-function changeAdj2(innerText){
+function changeAdj2(innerText) {
     adj1 = innerText;
     updateView();
 }
-function changeThing3(innerText){
+function changeThing3(innerText) {
     thing2 = innerText;
     updateView();
 }
-function changeThing4(innerText){
+function changeThing4(innerText) {
     thing2 = innerText;
     updateView();
 }
-function changeThing5(innerText){
+function changeThing5(innerText) {
     thing3 = innerText;
     updateView();
 }
-function changeThing6(innerText){
+function changeThing6(innerText) {
     thing3 = innerText;
     updateView();
 }
-    function changeAdj3(innerText){
+function changeAdj3(innerText) {
     adj3 = innerText;
     updateView();
 }
-function changeAdj4(innerText){
+function changeAdj4(innerText) {
     adj3 = innerText;
     updateView();
 }

@@ -7,11 +7,9 @@ body {
 }
 #container {
     display: grid;
-    width: 50%;
+    width: auto;
     justify-self: center;
     background-color: rgba(255, 255, 255, 0.303);
-    width: 800px;
-    justify-content: center;
 }
 h1 {
     background-image: linear-gradient(grey, white);
@@ -113,7 +111,7 @@ h1 {
 }
 #wordOpt {
     display: grid;
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: repeat(2, 1fr);
 }
 #uc {
     display: grid;
@@ -137,3 +135,19 @@ h1 {
     text-align: center;
     text-shadow: 0 0 8px rgb(3, 146, 229), 0 0 12px rgb(6, 107, 240), 0 0 16px #0ff;
     }
+#react{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+    width: 100px;
+    gap: 5px;
+}
+.lamp{
+    border-radius: 50%;
+    background-color: blueviolet;
+    width: 56px;
+    height: 56px;
+}
+.lampOn{
+    background-color: rgb(244, 236, 172);
+}
