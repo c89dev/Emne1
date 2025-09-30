@@ -1,4 +1,5 @@
-let reactApp = document.getElementById("react");
+let targetsDiv = document.getElementById("reactTargets");
+let menuDiv = document.getElementById("reactMenu");
 let gameRunning = false;
 let gridSize = 25;
 let activeLamp;
@@ -27,7 +28,10 @@ function drawReact() {
     }
     
     menuHtml = /*HTML*/`
-    <div id="reactMenu" style="height: 150px; position: relative; top: 20px;">
+    <div id="reactMenu" style="display: grid;
+    grid-template-columns: repeat(5,1fr); 
+    height: 50px; width: auto; gap: 20px; font-style: bold;
+    padding: 10px;">
     <button onclick="startGame()">START</button>
     <button onclick="stopGame()">STOP</button>
     BEST:
@@ -35,7 +39,8 @@ function drawReact() {
     ${currentBest}
     </div>
     `
-    reactApp.innerHTML = targetsHtml + menuHtml;
+    targetsDiv.innerHTML = targetsHtml;
+    menuDiv.innerHTML = menuHtml;
 }
 
 function clickIt(id) {

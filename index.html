@@ -131,8 +131,21 @@
         <div id="checkEmail"></div>
         <div id="error" style="height: 100px;"></div>
         <h1>Reaction Time</h1>
-        <div id="react"></div>
+        <div id="reactTargets"></div>
+        <div id="reactMenu"></div>
+        <h1></h1>
+        <table id="tasksTable"></table>
+        <p>
+            <input type="text" id="taskDescription" placeholder="Task">
+            <input type="text" id="taskPerson" placeholder="Person">
+            <input type="date" id="taskDate" placeholder="Due Date">
+            <button onclick="addTask(this.value)">Add</button>
+        </p>
     </section>
+
+
+
+
     <img id="uc" src="./media/underconstruction.webp" alt="image">
 
     <script src="Introduksjon til JS/script/script.js"></script>
@@ -151,5 +164,7 @@
     <script src="Introduksjon til JS/script/magic8ball.js"></script>
     <script src="Introduksjon til JS/script/checkEmail.js"></script>
     <script src="Introduksjon til JS/script/reaction.js"></script>
+    <script src="Introduksjon til JS/script/todoList.js"></script>
 </body>
+
 </html>

@@ -135,12 +135,13 @@ h1 {
     text-align: center;
     text-shadow: 0 0 8px rgb(3, 146, 229), 0 0 12px rgb(6, 107, 240), 0 0 16px #0ff;
     }
-#react{
+#reactTargets{
     display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat(5,1fr);
     width: 100px;
     gap: 5px;
+    padding: 10px;
 }
 .lamp{
     border-radius: 50%;
@@ -151,3 +152,17 @@ h1 {
 .lampOn{
     background-color: rgb(244, 236, 172);
 }
+table, td, tr, th{
+    border: 2px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+}
+td, th{
+    padding: 4px;
+}
+th {
+    background-color: blue;
+    color: rgb(249, 249, 249);
+}
+tr:nth-child(even) {background: rgb(234, 234, 234)}
+tr:nth-child(odd) {background: rgb(194, 203, 212)}
+
